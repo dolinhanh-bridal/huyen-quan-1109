@@ -210,8 +210,14 @@
   ul.dau li::before{content:"–";position:absolute;left:0;color:var(--blue)}
   ul.dau b{color:var(--ink);font-weight:600}
 
-  .tl{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .tl{display:flex;flex-direction:column;border-top:1px solid var(--line);
+      position:relative;padding-left:26px}
+  .tl::before{content:"";position:absolute;left:7px;top:16px;bottom:16px;width:2px;background:var(--line)}
+  .tl .row::before{content:"";position:absolute;left:-26px;top:15px;width:14px;height:14px;border-radius:50%;
+      background:var(--surface);border:2px solid var(--line);box-sizing:border-box}
+  .tl .row.cham::before{background:var(--blue);border-color:var(--blue)}
   .tl .row{
+    position:relative;
     display:grid;grid-template-columns:74px 1fr;gap:10px;
     padding:9px 0 10px;border-bottom:1px dashed var(--line);align-items:start;
   }
@@ -345,7 +351,7 @@
       
       
       <span>Gói pre <b>HANOI OUTDOOR</b></span>
-      <span><b>2 địa điểm</b> tại Hà Nội</span>
+      <span>Chụp <b>Tạ Hiện, phố cổ</b> + <b>studio</b></span>
       <span>Ekip <b>1 photo + 1 makeup + 1 trợ lý</b></span>
       <span>Tặng <b>thiệp online</b></span>
     </div>
@@ -372,7 +378,7 @@
     <div class="date">
       <div class="k">Chụp pre-wedding</div>
       <div class="v">11/09/2026</div>
-      <div class="n">2 điểm chụp tại Hà Nội</div>
+      <div class="n">Tạ Hiện, phố cổ · studio · 8h00 – 16h30</div>
     </div>
     <div class="date">
       <div class="k">Ngày cưới</div>
@@ -382,7 +388,7 @@
   </div>
 
   
-  <div class="note warn"><b>Trước buổi thử váy 18:00 ngày 10/09:</b> cô dâu xem trước catalogue và chọn sẵn <b>5 mẫu</b> mình thích để buổi thử nhanh gọn nhé. Buổi thử mình cũng chốt luôn <b>2 điểm chụp</b> và <b>giờ trang điểm</b> cho ngày hôm sau.</div>
+  <div class="note warn"><b>Buổi thử váy 18:00 hôm nay 10/09</b> — cô dâu xem trước catalogue và chọn sẵn <b>5 mẫu</b> mình thích để buổi thử nhanh gọn nhé. Mai 11/09 mình chụp tại <b>TẠ HIỆN, phố cổ</b> và <b>studio</b>, trang điểm từ <b>8h00</b>.</div>
 
   <!-- 1 -->
   <section class="sec open" data-sec="hd">
@@ -411,7 +417,7 @@
       <div class="note">Những gì hai bạn nhận được sau buổi chụp. Giờ giấc, địa điểm và trang phục nằm ở mục <b>5 · Timeline buổi chụp</b>.</div>
 
       <div class="goi">
-        <div class="goi-h">Gói chụp <b>HANOI OUTDOOR</b> — chụp 11/09/2026</div>
+        <div class="goi-h">Gói chụp <b>HANOI OUTDOOR</b> — chụp Thứ Sáu 11/09/2026</div>
         <ul class="ck">
           <li><span class="txt">Ảnh gốc<small>600 – 800 file · link tải gửi sau buổi chụp</small></span></li>
           <li><span class="txt">Ảnh pts<small>40 ảnh photoshop</small></span></li>
@@ -438,15 +444,15 @@
     <button class="head" type="button"><span class="num">3</span><span class="t">Timeline buổi chụp — 11/09</span><span class="arrow">›</span></button>
     <div class="body">
       <div class="tlh">
-        <div class="tlh-t">Timeline chụp ảnh Pre-wedding</div>
-        <div class="tlh-s">by NUPAKACHI · Khánh Huyền &amp; Thế Quân · 11/09/2026</div>
+        <div class="tlh-t">Timeline chụp ngoại cảnh Hà Nội</div>
+        <div class="tlh-s">by NUPAKACHI · Khánh Huyền &amp; Thế Quân · Thứ Sáu 11/09/2026</div>
       </div>
       <ul class="dau">
         <li>Buổi chụp kết hợp <b>Dolinhanh Bridal</b> + <b>Nupakachi Wedding</b>.</li>
         <li>Cô dâu chú rể có mặt đúng các mốc giờ bên dưới.</li>
-        <li><b>2 địa điểm tại Hà Nội</b> · ekip 1 photo + 1 makeup + 1 trợ lý.</li>
+        <li><b>2 địa điểm</b>: chụp ngoại cảnh <b>TẠ HIỆN, PHỐ CỔ</b> · concept <b>studio</b>.</li>
+        <li>Ekip 1 photo + 1 makeup + 1 trợ lý · buổi chụp từ <b>8h00 đến 16h30</b>.</li>
       </ul>
-      <div class="note warn">Các mốc giờ dưới đây là <b>dự kiến</b> vì hai bạn chưa chốt địa điểm. Chốt xong ở buổi thử váy 10/09, studio gửi lại bản giờ chính xác ngay trong tối đó.</div>
       <div class="tl" data-tl="chup"></div>
       
 
@@ -463,12 +469,12 @@
       <div class="goi">
         <div class="goi-h">Trang phục &amp; đồ chuẩn bị</div>
         <ul class="ck">
-          <li><span class="txt">Look 01 — váy cưới<small>Chốt mẫu tại buổi thử 10/09 · studio chuẩn bị</small></span></li>
-          <li><span class="txt">Look 02 — váy cưới<small>Chốt mẫu tại buổi thử 10/09 · studio chuẩn bị</small></span></li>
+          <li><span class="txt">Look 01 — váy cưới chụp <b>TẠ HIỆN</b><small>Chốt mẫu tại buổi thử tối nay · studio chuẩn bị</small></span></li>
+          <li><span class="txt">Look 02 — váy cưới chụp <b>studio</b><small>Chốt mẫu tại buổi thử tối nay · thay lúc 13h00 – 14h30</small></span></li>
           <li><span class="txt">Voan trơn &amp; voan ren<small>Studio chuẩn bị theo mẫu váy đã chốt</small></span></li>
           <li><span class="txt">Giày cao gót cho cô dâu<small>Studio mang theo · cô dâu mang thêm đôi quen chân nếu muốn</small></span></li>
           <li><span class="txt">Vest chú rể<small>Anh tự chuẩn bị · báo studio trước nếu cần mượn</small></span></li>
-          <li><span class="txt">Hoa cầm tay tươi<small>Tone trắng xanh — chốt ở buổi thử xem studio hay hai bạn chuẩn bị</small></span></li>
+          <li><span class="txt">Hoa cầm tay tươi<small>Tone trắng xanh — chốt ở buổi thử tối nay xem studio hay hai bạn chuẩn bị</small></span></li>
         </ul>
       </div>
 
@@ -482,15 +488,15 @@
   <section class="sec" data-sec="chuanbi">
     <button class="head" type="button"><span class="num">4</span><span class="t">Hai bạn cần chuẩn bị gì</span><span class="arrow">›</span></button>
     <div class="body">
-      <div class="note">Soạn sẵn từ tối hôm trước cho khỏi quên. Buổi chụp bắt đầu từ <b>3h sáng</b> và kéo tới <b>13h</b>. Bấm vào cả dòng là tick được.</div>
+      <div class="note">Soạn sẵn từ tối hôm trước cho khỏi quên. Buổi chụp bắt đầu từ <b>8h sáng</b> và kéo tới <b>16h30</b>. Bấm vào cả dòng là tick được.</div>
 
       <div class="goi">
         <div class="goi-h">Mang theo trong ngày chụp</div>
         <ul class="ck">
-          <li><input type="checkbox" data-k="mt1"><span class="txt">Tiền vé vào cửa địa điểm chụp<small>Khoản này không nằm trong hợp đồng</small></span></li>
+          <li><input type="checkbox" data-k="mt1"><span class="txt">Tiền gửi xe &amp; phí phát sinh ở phố cổ<small>Chụp tại Tạ Hiện có thể phải trả tại chỗ — không nằm trong hợp đồng</small></span></li>
           <li><input type="checkbox" data-k="mt2"><span class="txt">Nước uống, đồ ăn nhẹ, sạc dự phòng</span></li>
-          <li><input type="checkbox" data-k="mt3"><span class="txt">Áo khoác mỏng<small>Sáng sớm ở Hà Nội đầu tháng 9 dễ se lạnh</small></span></li>
-          <li><input type="checkbox" data-k="mt4"><span class="txt">Ô hoặc mũ<small>Phòng nắng gắt giữa trưa</small></span></li>
+          <li><input type="checkbox" data-k="mt3"><span class="txt">Đồ ăn trưa nhẹ<small>13h00 – 14h30 nghỉ ăn trưa tại studio</small></span></li>
+          <li><input type="checkbox" data-k="mt4"><span class="txt">Ô hoặc mũ<small>11h00 – 13h00 chụp ngoài trời ở phố cổ</small></span></li>
         </ul>
       </div>
 
@@ -612,12 +618,12 @@
 (function(){
   var MAC_DINH = {
     chup: [
-      ["3:00","Trang điểm & làm tóc","Cô dâu chú rể có mặt đúng giờ"],
-      ["5:30","Di chuyển tới điểm chụp 01",""],
-      ["6:30","Chụp tại điểm chụp 01","Look 01 — nắng sớm"],
-      ["9:30","Di chuyển tới điểm chụp 02","Trên xe đổi Look 02, chỉnh lại makeup"],
-      ["11:00","Chụp tại điểm chụp 02","Look 02"],
-      ["13:00","Di chuyển về, kết thúc buổi chụp","Hẹn chọn 40 ảnh pts trước 20h tối cùng ngày"]
+      ["8h00 – 10h00","Trang điểm + làm tóc","Tại studio",true],
+      ["10h30","Di chuyển ra góc Tạ Hiện, phố cổ",""],
+      ["11h00 – 13h00","Chụp ngoại cảnh TẠ HIỆN","Look 01",true],
+      ["13h00 – 14h30","Di chuyển về studio, làm lại tóc, nghỉ ăn trưa","Đổi sang Look 02"],
+      ["14h30 – 16h30","Chụp concept studio","Look 02",true],
+      ["16h30","Kết thúc, thu dọn","Hẹn chọn 40 ảnh pts trước 20h tối cùng ngày"]
     ]
   };
   function veTL(ten, rows){
@@ -630,6 +636,7 @@
       var v=document.createElement("div"); v.className="v";
       var v1=document.createElement("div"); v1.className="viec"; v1.textContent=r[1]; v.appendChild(v1);
       if(r[2]){ var v2=document.createElement("div"); v2.className="phu"; v2.textContent=r[2]; v.appendChild(v2); }
+      if(r[3]) row.className="row cham";
       row.append(h1,v); box.appendChild(row);
     });
   }
